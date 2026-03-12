@@ -431,114 +431,46 @@ img {
 
 /*===================== SKILLS =========================*/
 
-.skills__container {
-  row-gap: 0;
+/* Skills section spacing */
+#skills {
+    padding: 60px 0;
 }
 
-.skills__header {
-  display: flex;
-  align-items: center;
-  margin-bottom: var(--mb-2-5);
-  cursor: pointer;
+/* Each skill block */
+.skill {
+    margin-bottom: 25px;
 }
 
-.skills__icon,
-.skills__arrow {
-  font-size: 1.25rem;
-  color: var(--first-color);
+/* Skill title */
+.skill p {
+    font-weight: 600;
+    margin-bottom: 6px;
 }
 
-.skills__icon {
-  margin-right: var(--mb-0-75);
+/* Progress bar background */
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-.skills__title {
-  font-size: var(--h3-font-size);
-}
 
-.skills__arrow {
-  margin-left: auto;
-  transition: 0.4s;
-}
 
-.skills__list {
-  row-gap: 1.5rem;
-  padding-left: 2.7rem;
-}
 
-.skills__titles {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: var(--mb-0-5);
-}
-
-.skills__name {
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-medium);
-}
-
-.skills__bar,
-.skills__percentage {
-  height: 5px;
-  border-radius: 0.25rem;
-}
-
-.skills__bar {
-  background-color: var(--first-color-lighter);
-}
-.skills__percentage {
-  display: block;
-  background-color: var(--first-color);
-}
-
-.skills__html {
-  width: 90%;
-}
-.skills__css {
-  width: 80%;
-}
-.skills__js {
-  width: 55%;
-}
-.skills__react {
-  width: 40%;
-}
-
-.skills__php {
-  width: 80%;
-}
-.skills__node {
-  width: 70%;
-}
-.skills__firebase {
-  width: 75%;
-}
-.skills__python {
-  width: 50%;
-}
-
-.skills__figma {
-  width: 85%;
-}
-.skills__sketch {
-  width: 75%;
-}
-.skills__photoshop {
-  width: 60%;
-}
-
-.skills__close .skills__list {
-  height: 0;
-  overflow: hidden;
-}
-
-.skills__open .skills__list {
-  height: max-content;
-  margin-bottom: var(--mb-2-5);
-}
-
-.skills__open .skills__arrow {
-  transform: rotate(-180deg);
+/* Progress fill */
+.progress {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #6a5acd, #00bfff);
+    border-radius: 10px;
+    text-align: right;
+    font-size: 10px;
+    color: white;
+    line-height: 12px;
+    padding-right: 5px;
+    transition: width 1.5s ease;
 }
 
 /*==================== Qualifications ====================*/

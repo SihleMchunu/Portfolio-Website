@@ -1,6 +1,28 @@
 const navMenu = document.getElementById("nav-menu"),
   navToggle = document.getElementById("nav-toggle");
-navClose = document.getElementById("nav-close");
+const navClose = document.getElementById("nav-close");
+const skillsSection = document.querySelector("#skills");
+const progressBars = document.querySelectorAll(".progress");
+
+let skillsAnimated = false;
+
+function showSkills() {
+
+    const sectionTop = skillsSection.getBoundingClientRect().top;
+    const screenHeight = window.innerHeight;
+
+    if (sectionTop < screenHeight - 100 && !skillsAnimated) {
+
+        progressBars.forEach(bar => {
+            const width = bar.getAttribute("data-width");
+            bar.style.width = width;
+        });
+
+        skillsAnimated = true;
+    }
+}
+
+window.addEventListener("scroll", showSkills);
 if (navToggle) {
   navToggle.addEventListener("click", () => {
     navMenu.classList.add("show-menu");
